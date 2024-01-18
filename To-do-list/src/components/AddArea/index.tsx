@@ -12,6 +12,7 @@ const [text, setText] = useState('')
 const handleKeyDown = (e: KeyboardEvent) =>  {
     if(e.code === 'Enter' && text !==  ''){
         onEnter(text)
+        setText('')
     }
 
 }

@@ -10,12 +10,12 @@ const ListItem = ({ item }: Props) => {
     const [check, setCheck] = useState(item.done)
 
     return (
-        <C.Container done={check}>
+        <C.Container>
             <input type='checkbox'
              checked={check}
              onChange={e => setCheck(e.target.checked)}
              />
-            <label>{item.name}</label>
+            <label className={check ? 'Marcado' : ''}>{item.name}</label>
         </C.Container>
     )
 }

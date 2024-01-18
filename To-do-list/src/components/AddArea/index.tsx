@@ -9,16 +9,20 @@ type Props = {
 const AddArea = ({onEnter}: Props) => {
 const [text, setText] = useState('')
 
+const addTask = () => {
+  onEnter(text)
+  setText('')
+}
+
 const handleKeyDown = (e: KeyboardEvent) =>  {
     if(e.code === 'Enter' && text !==  ''){
-        onEnter(text)
-        setText('')
+        addTask()
     }
 
 }
   return (
     <C.Container>
-        <div className='image'>➕</div>
+        <div className='image' onClick={addTask}>➕</div>
         <input type="text" 
         placeholder='Adicione uma tarefa'
         value={text}

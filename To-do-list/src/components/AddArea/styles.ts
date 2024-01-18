@@ -10,6 +10,7 @@ align-items: center;
 
 .image{
     margin-right: 5px;
+    cursor: pointer;
 }
 
 input{

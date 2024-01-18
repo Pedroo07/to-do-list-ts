@@ -83,6 +83,7 @@ align-items: center;
 
 .image{
     margin-right: 5px;
+    cursor: pointer;
 }
 
 input{
@@ -93,4 +94,4 @@ input{
     font-size: 18px;
     flex: 1;
 }
-`,Dm=({onEnter:e})=>{const[t,n]=Tt.useState(""),r=l=>{l.code==="Enter"&&t!==""&&(e(t),n(""))};return xe.jsxs(Om,{children:[xe.jsx("div",{className:"image",children:"➕"}),xe.jsx("input",{type:"text",placeholder:"Adicione uma tarefa",value:t,onChange:l=>n(l.target.value),onKeyDown:r})]})},jm=()=>{const[e,t]=Tt.useState([{id:1,name:"Estudar TypeScript",done:!0}]),n=r=>{let l=[...e];l.push({id:e.length+1,name:r,done:!1}),t(l)};return xe.jsx(Tm,{children:xe.jsxs(Lm,{children:[xe.jsx($m,{children:"Lista de Tarefas"}),xe.jsx(Dm,{onEnter:n}),e.map((r,l)=>xe.jsx(Im,{item:r},l))]})})};Go.createRoot(document.getElementById("root")).render(xe.jsx(xn.StrictMode,{children:xe.jsx(jm,{})}));
+`,Dm=({onEnter:e})=>{const[t,n]=Tt.useState(""),r=()=>{e(t),n("")},l=o=>{o.code==="Enter"&&t!==""&&r()};return xe.jsxs(Om,{children:[xe.jsx("div",{className:"image",onClick:r,children:"➕"}),xe.jsx("input",{type:"text",placeholder:"Adicione uma tarefa",value:t,onChange:o=>n(o.target.value),onKeyDown:l})]})},jm=()=>{const[e,t]=Tt.useState([{id:1,name:"Estudar TypeScript",done:!0}]),n=r=>{let l=[...e];l.push({id:e.length+1,name:r,done:!1}),t(l)};return xe.jsx(Tm,{children:xe.jsxs(Lm,{children:[xe.jsx($m,{children:"Lista de Tarefas"}),xe.jsx(Dm,{onEnter:n}),e.map((r,l)=>xe.jsx(Im,{item:r},l))]})})};Go.createRoot(document.getElementById("root")).render(xe.jsx(xn.StrictMode,{children:xe.jsx(jm,{})}));

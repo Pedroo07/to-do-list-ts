@@ -8,6 +8,13 @@ export const Container = styled.div`
     border-radius: 10px;
     margin-bottom: 10px;
     align-items: center;
+    justify-content: space-between;
+
+    div{
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
 
     input {
         width: 25px;

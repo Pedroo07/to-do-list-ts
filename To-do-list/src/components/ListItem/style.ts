@@ -25,6 +25,13 @@ export const Container = styled.div`
     label {
         color: #CCC;
     }
+    button{
+        margin-left: 5px;
+        border: none;
+        background: transparent;
+        font-size: 1.08rem;
+        cursor: pointer;
+    }
     .Marcado{
         text-decoration: line-through;
     }
